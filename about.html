@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PHYSIXLAB | About</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink:#ff4ecd;
+  --blue:#4facfe;
+  --purple:#8f5cff;
+  --yellow:#ffe066;
+  --glass:rgba(255,255,255,0.12);
+}
+
+*{
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(-45deg,#0b0d2a,#1b1f63,#1a1a4f,#11143b);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+  color:#fff;
+  opacity:0;
+  transition:opacity .6s ease;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+body.loaded{opacity:1}
+
+/* NAVIGATION */
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 50px;
+  background:rgba(0,0,0,.4);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+nav strong{
+  font-size:1.2rem;
+  letter-spacing:1px;
+}
+
+nav a{
+  position:relative;
+  color:white;
+  text-decoration:none;
+  margin:0 14px;
+  font-weight:500;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+.logonavbar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logonavbar img{
+  height:34px;
+  width:auto;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:110px 8% 80px;
+  position:relative;
+}
+
+header h1{
+  font-size:3.2rem;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+header p{
+  max-width:700px;
+  margin:auto;
+  opacity:.9;
+}
+
+/* subtle glow like kinematics page */
+header::after{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:radial-gradient(circle,var(--blue),transparent);
+  top:30%;
+  left:50%;
+  transform:translateX(-50%);
+  filter:blur(90px);
+  opacity:.25;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 8%;
+}
+
+h2{
+  text-align:center;
+  font-size:2.3rem;
+  margin-bottom:50px;
+}
+
+/* CARD */
+.card{
+  background:var(--glass);
+  border-radius:24px;
+  padding:30px;
+  backdrop-filter:blur(18px);
+  transition:.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 30px rgba(79,172,254,.4);
+}
+
+.logo{
+  width:160px;
+  display:block;
+  margin:0 auto 25px;
+}
+
+/* TEAM GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.member{
+  background:var(--glass);
+  border-radius:24px;
+  padding:25px;
+  text-align:center;
+  backdrop-filter:blur(18px);
+  transition:.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.member.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.member:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 35px rgba(79,172,254,.4);
+}
+
+.profile-pic{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:15px;
+}
+
+.member h3{
+  margin:10px 0 5px;
+  color:var(--yellow);
+}
+
+.job{
+  font-size:.95rem;
+  opacity:.85;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  background:#070816;
+  opacity:.85;
+  margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logonavbar">
+  <img src="laurensialogo.png" alt="Santa Laurensia Logo">
+  <strong>PHYSIXLAB</strong>
+  </div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="kinematics.html">Kinematics</a>
+    <a href="waves.html">Waves</a>
+    <a href="staticelectricity.html">Static Electricity</a>
+    <a href="magnetism.html">Magnetism</a>
+    <a href="references.html">References</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<header>
+  <h1>About PHYSIXLAB</h1>
+  <p>Learn more about our school and the team behind this educational physics platform.</p>
+</header>
+
+<section>
+  <h2>Our School</h2>
+
+  <div class="card" style="text-align:justify; max-width:900px; margin:auto;">
+    <img src="laurensialogo.png" alt="Santa Laurensia School Logo" class="logo">
+
+    <p>
+      Founded in 1994, Santa Laurensia School is a progressive Roman Catholic School committed to nurturing the whole child—mind, body, and spirit.
+      We offer a bilingual, holistic education from early years through senior high school, preparing students for both academic excellence and personal growth.
+    </p>
+
+    <p>
+      Guided by a diverse team of dedicated local and international educators, 
+      our community celebrates global awareness and cultural appreciation while remaining 
+      rooted in strong Catholic values. At Santa Laurensia, learning is more than academics—it 
+      is a joyful journey that cultivates character, perseverance, and faith.
+    </p>
+
+    <p>
+      Our mission is to empower every student to reach their full potential, 
+      compassionate and future-ready leaders who can navigate global challenges 
+      with resilience and purpose. 
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Meet the Team</h2>
+
+  <div class="grid">
+
+    <div class="member">
+      <img src="Image_20260226_085854_484.jpeg" class="profile-pic" alt="Celine">
+      <h3>Celine Ie</h3>
+      <p class="job">Project Leader</p>
+    </div>
+
+    <div class="member">
+      <img src="IMG_5814.jpeg" class="profile-pic" alt="Jocelyn">
+      <h3>Jocelyn Matthea Gunawan</h3>
+      <p class="job">Content Specialist</p>
+    </div>
+
+    <div class="member">
+      <img src="michelle9c.jpeg" class="profile-pic" alt="Michelle">
+      <h3>Michelle Aretha Lie</h3>
+      <p class="job">Designer & Editor</p>
+    </div>
+
+    <div class="member">
+      <img src="matthewkusnanto.jpg" class="profile-pic" alt="Matt">
+      <h3>Matthew Kusnanto</h3>
+      <p class="job">Web Developer</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  PHYSIXLAB — Educational Physics Platform
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+    }
+  });
+},{threshold:0.2});
+
+document.querySelectorAll(".card, .member").forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
