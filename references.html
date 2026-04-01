@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHYSIXLAB | References</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink:#ff4ecd;
+  --blue:#4facfe;
+  --purple:#8f5cff;
+  --yellow:#ffe066;
+  --glass:rgba(255,255,255,0.12);
+}
+
+*{
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(-45deg,#0b0d2a,#1b1f63,#1a1a4f,#11143b);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+  color:#fff;
+  opacity:0;
+  transition:opacity .6s ease;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+body.loaded{opacity:1}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 50px;
+  background:rgba(0,0,0,.4);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav strong{
+  font-size:1.2rem;
+  letter-spacing:1px;
+}
+
+nav a{
+  position:relative;
+  color:white;
+  text-decoration:none;
+  margin:0 14px;
+  font-weight:500;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+header{
+  text-align:center;
+  padding:110px 8% 80px;
+  position:relative;
+}
+
+header h1{
+  font-size:3.2rem;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+header p{
+  max-width:700px;
+  margin:auto;
+  opacity:.9;
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:radial-gradient(circle,var(--blue),transparent);
+  top:30%;
+  left:50%;
+  transform:translateX(-50%);
+  filter:blur(90px);
+  opacity:.25;
+}
+
+section{
+  padding:80px 8%;
+}
+
+h2{
+  text-align:center;
+  font-size:2.3rem;
+  margin-bottom:50px;
+}
+
+.card{
+  background:var(--glass);
+  border-radius:24px;
+  padding:35px;
+  backdrop-filter:blur(18px);
+  transition:.4s;
+  opacity:0;
+  transform:translateY(40px);
+  max-width:950px;
+  margin:auto;
+  line-height:1.7;
+}
+
+.card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 35px rgba(79,172,254,.4);
+}
+
+.reference-title{
+  color:var(--yellow);
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.reference-text{
+  font-size:0.95rem;
+  opacity:.9;
+  word-break:break-word;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  background:#070816;
+  opacity:.85;
+  margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong>PHYSIXLAB</strong>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="kinematics.html">Kinematics</a>
+    <a href="waves.html">Waves</a>
+    <a href="staticelectricity.html">Static Electricity</a>
+    <a href="magnetism.html">Magnetism</a>
+    <a href="references.html">References</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<header>
+  <h1>References</h1>
+  <p>Below are the sources used in the development of PHYSIXLAB.</p>
+</header>
+
+<section>
+
+  <div class="card">
+
+    <div class="reference-text" style="text-align:justify">
+      Arnold, B., Woolley, S., & Johnson, P. (2017). <i>Edexcel International GCSE (9-1) Physics: Student book.</i>
+      <br><br>
+      Cognito. (2019, December 3). <i>GCSE Physics - Distance-Time Graphs</i> [Video]. YouTube. https://www.youtube.com/watch?v=RM02SnuJ0MY
+      <br><br>
+      Cognito. (2025, September 8). <i>GCSE Physics - Scalar & Vector Quantities - What they are | Examples | How to represent Vectors</i> [Video]. YouTube. https://www.youtube.com/watch?v=D0Hkd5TaaTQ
+      <br><br>
+      Cognito. (2025b, September 18). <i>GCSE Physics - Speed, Velocity, Distance & Displacement | Scalar & Vector Quantities (2026/27 exams)</i> [Video]. YouTube. https://www.youtube.com/watch?v=NZvMXcIztuU
+      <br><br>
+      Cognito. (2025c, September 19). <i>GCSE Physics - Acceleration - Rate of Change in Velocity | Equations (2026/27 exams)</i> [Video]. YouTube. https://www.youtube.com/watch?v=ysda01Y8PgE
+      <br><br>
+      Cognito. (2025d, September 22). <i>GCSE Physics - Velocity-Time Graphs - How to Find Acceleration & Distance Travelled (2026/27 exams)</i> [Video]. YouTube. https://www.youtube.com/watch?v=VJefeYJL3uE
+      <br><br>
+      GCSE Revision Buddy. (2025, August 15). <i>Waves - Physics GCSE Revision - Science Homework help KS4</i>. https://gcserevisionbuddy.co.uk/physics/waves/
+      <br><br>
+      <i>Distance versus Displacement</i>. (n.d.). https://www.physicsclassroom.com/class/1dkin/lesson-1/distance-and-displacement
+      <br><br>
+      <i>https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_all.html</i>. (n.d.). PhET Interactive Simulations. https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_all.html
+      <br><br>
+      Hwang, F.-K., Teng, F., & Wee, L. K. (2022). <i>velocity-time graph editor simulator</i>. https://iwant2study.org/lookangejss/02_newtonianmechanics_2kinematics/ejss_model_Kinematicsfukwun/Kinematicsfukwun_Simulation.xhtml
+      <br><br>
+      Khan Academy. (n.d.). <i>Unit 3: Waves</i>. https://www.khanacademy.org/science/physics/mechanical-waves-and-sound
+      <br><br>
+      Libretexts. (2020, November 5). <i>2.1: Basics of Kinematics</i>. Physics LibreTexts. https://phys.libretexts.org/Bookshelves/University_Physics/Physics_(Boundless)/2%3A_Kinematics/2.1%3A_Basics_of_Kinematics
+      <br><br>
+      <i>Magnetism</i>. (n.d.-b). [Video]. Teach Engineering. https://www.teachengineering.org/populartopics/view/magnetism#:~:text=Magnetism%20is%20the%20physical%20phenomenon,not%20easily%20lose%20their%20magnetism.
+      <i>Magnetism</i>. (n.d.-c). https://education.nationalgeographic.org/resource/magnetism/
+      <br><br>
+      <br><br>
+        OpenAI. (2026, February 25). <i>Futuristic Neon Physics Lab</i> [AI-Generated Image]. ChatGPT. https://chatgpt.com 
+      Prompt: "Create a square image of a futuristic neon physics laboratory. On the left, glowing motion trails illustrate kinematics with a moving projectile arc and velocity vectors. In the center, a bright oscillating sine wave and ripple patterns. On the right, visible electric sparks and glowing field lines that demonstrate static electricity, while floating magnetic field lines curve around a bar magnet. The physics formula “v = s/t” on a notebook and various physics symbols glow softly in the background. Purple-blue gradient backdrop with colorful lights out of focus, cinematic lighting, vibrant pink and blue neon glow, high detailed 3D digital illustration, high resolution, modern science aesthetic, website banner composition."
+      <br><br>
+      Stewart, K. (2023, March 24). <i>Static Electricity</i> (Britannica Editors, Ed.). Britannica. https://www.britannica.com/science/static-electricity
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  PHYSIXLAB — Educational Physics Platform
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+    }
+  });
+},{threshold:0.2});
+
+document.querySelectorAll(".card").forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
